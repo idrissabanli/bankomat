@@ -51,13 +51,15 @@ services:
     restart: "always"
     env_file: .env
     environment:
+      - VIRTUAL_HOST=techacademy.cf
+      - VIRTUAL_PORT=8030
       - TIMEOUT=300
-      - HTTP_PORT=8000
+      - HTTP_PORT=8030
       - STATS_PORT=8001
     volumes:
       - .:/code
     ports:
-      - "8000:8000"
+      - "8030:8030"
     links:
       - postgres
     depends_on:
