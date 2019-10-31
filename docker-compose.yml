@@ -62,7 +62,7 @@ services:
       - postgres
     depends_on:
       - "postgres"
-#networks:
-#  default:
-#    external:
-#      name: nginx-proxy
+networks:
+  default:
+    external:
+      name: nginx-proxy
