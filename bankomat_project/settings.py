@@ -153,7 +153,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bankomat_project.urls'
 
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
