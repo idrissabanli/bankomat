@@ -22,7 +22,7 @@ ADD . ${APP_ROOT}
 COPY mime.types /etc/mime.types
 
 # uWSGI will listen on this port
-EXPOSE 8000
+EXPOSE 80
 
 # Call collectstatic (customize the following line with the minimal environment variables needed for manage.py to run):
 RUN if [ -f manage.py ]; then /venv/bin/python manage.py collectstatic --noinput; fi
