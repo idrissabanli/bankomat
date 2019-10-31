@@ -1,11 +1,15 @@
 from django.shortcuts import render
 # from django.views import generic
 from rest_framework.views import APIView
+from rest_framework.generics import GenericAPIView
 from .serializers import CheckSerializer, CashOutSerializer
 from django.http import JsonResponse
-from .models import  Cart
+from .models import Cart
 from rest_framework.exceptions import ValidationError
+from django.views.generic import View
 from rest_framework.authtoken.models import Token
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 class CheckAPIView(APIView):
