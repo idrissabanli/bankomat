@@ -46,7 +46,7 @@ if not settings.PROD:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # This is change default admin panel Headers and titles
-admin.site.site_header = 'BankomatProject Admin'
-admin.site.site_title = 'BankomatProject Administration'
-admin.site.index_title = 'BankomatProject Administration'
+admin.site.site_header = 'ATM Project Admin'
+admin.site.site_title = 'ATM Administration'
+admin.site.index_title = 'ATM Project Administration'
 
