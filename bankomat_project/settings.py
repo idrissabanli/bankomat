@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     # 'api.apps.ApiConfig',
     'bankomat.apps.BankomatConfig',
     'rest_framework',
+    'corsheaders',
 ]
 
 # Ckeditor config
@@ -143,11 +144,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     # 'social_django.middleware.SocialAuthExceptionMiddleware', # if you want to social login uncomment this
     # 'app.middleware.game_session_middleware.game_check_session', # custom middleware
 ]
 
 ROOT_URLCONF = 'bankomat_project.urls'
+
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 TEMPLATES = [
     {
