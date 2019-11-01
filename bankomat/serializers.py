@@ -17,7 +17,7 @@ class CheckSerializer(serializers.ModelSerializer):
         ]
 
 
-class CashOutSerializer(serializers.Serializer):
+class CashOutSerializer(serializers.ModelSerializer):
     cash = serializers.DecimalField(max_digits=6, decimal_places=2)
 
     class Meta:
