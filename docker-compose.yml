@@ -63,16 +63,16 @@ services:
     env_file: .env
     environment:
       - VIRTUAL_HOST=localhost, 34.70.181.209
-      - VIRTUAL_PORT=80
+      - VIRTUAL_PORT=8000
       - TIMEOUT=300
-      - HTTP_PORT=80
+      - HTTP_PORT=8000
       - STATS_PORT=8001
     volumes:
       - .:/code
       - ./static/:/code/static/
       - ./media/:/code/media/
     ports:
-      - "80:80"
+      - "8000:8000"
     links:
       - postgres
     depends_on:
